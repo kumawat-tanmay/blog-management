@@ -9,9 +9,9 @@ const Users = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // role change confirmation state
+  
   const [pendingRoleChange, setPendingRoleChange] = useState(null);
-  // { userId, newRole }
+  
 
   /* ===============================
      FETCH USERS (SuperAdmin only)

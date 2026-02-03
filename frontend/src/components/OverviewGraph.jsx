@@ -9,7 +9,7 @@ import {
 } from "recharts";
 
 const OverviewGraph = ({ stats, role }) => {
-  // viewer ko graph nahi
+  
   if (role === "viewer") return null;
 
   const data =

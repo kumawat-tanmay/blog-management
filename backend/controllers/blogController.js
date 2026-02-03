@@ -263,7 +263,7 @@ export const deleteBlog = async (req, res) => {
       });
     }
 
-    // 🔐 Ownership / SuperAdmin check
+    // Ownership / SuperAdmin check
     if (
       blog.author.toString() !== req.user._id.toString() &&
       req.user.role !== "superAdmin"
@@ -283,7 +283,7 @@ export const deleteBlog = async (req, res) => {
         .replace(/\.[^/.]+$/, "");
     };
 
-    // 🔥 Delete OG Image
+    // Delete OG Image
     if (blog.ogImage) {
       const ogPublicId = extractPublicId(blog.ogImage);
       if (ogPublicId) {
@@ -291,7 +291,7 @@ export const deleteBlog = async (req, res) => {
       }
     }
 
-    // 🔥 Delete Feature Image
+    // Delete Feature Image
     if (blog.featureImage) {
       const featurePublicId = extractPublicId(blog.featureImage);
       if (featurePublicId) {

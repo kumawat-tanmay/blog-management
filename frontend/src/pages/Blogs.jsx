@@ -179,7 +179,7 @@ const Blogs = () => {
         </table>
       </div>
 
-      {/* LOADER / END */}
+      
       <div ref={observerRef} className="py-6 text-center">
         {loading && (
           <div className="flex justify-center gap-2 text-slate-500">

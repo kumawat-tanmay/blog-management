@@ -1,14 +1,16 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Helmet } from "react-helmet";
 import { ArrowLeft, Calendar, User } from "lucide-react";
+import { AuthContext } from "../context/AuthContext";
 
 export default function BlogView() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { backendURL } = useContext(AuthContext);
 
   useEffect(() => {
     fetchBlog();
@@ -17,7 +19,7 @@ export default function BlogView() {
 
   const fetchBlog = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/blogs/${slug}`);
+      const res = await axios.get(`${backendURL}/api/blogs/${slug}`);
       setBlog(res.data.blog);
     } catch (err) {
       setBlog(null);

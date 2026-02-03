@@ -62,12 +62,12 @@
     return (
         <div className="flex items-center justify-center min-h-screen bg-slate-950 p-6">
         
-        {/* Container: v4 compatible sizing */}
+        
         <div className="flex w-full max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden h-160 border border-slate-100">
             
-            {/* Left Side: Dark Branding */}
+            
             <div className="hidden lg:flex w-2/5 bg-slate-900 p-10 flex-col justify-between relative overflow-hidden">
-            {/* Subtle Glow using standard opacity */}
+            
             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500 opacity-10 blur-3xl" />
             
             <div className="relative z-10">
@@ -113,7 +113,7 @@
             </div>
             </div>
 
-            {/* Right Side: Form */}
+            
             <div className="flex flex-col justify-center w-full lg:w-3/5 p-8 md:p-20 bg-white">
             <div className="mb-10 text-left">
                 <h2 className="text-3xl font-black text-slate-900 tracking-tight">
